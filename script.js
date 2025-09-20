@@ -1,5 +1,5 @@
 // Timer duration variables (in seconds)
-let workTime = 1 * 60;        // 30 minutes
+let workTime = 30 * 60;        // 30 minutes
 let breakTime = 5 * 60;        // 5 minutes  
 let longBreakTime = 15 * 60;   // 15 minutes
 
@@ -324,3 +324,4 @@ Create attachEventListeners() - Learn event handling
 Create initializeTimer() - Learn initialization patterns
 Add DOMContentLoaded listener - Learn when to run code
 */
+
