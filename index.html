@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pomodoro Timer</title>
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="nav">
+            <h4>Pomosheesh</h3>
+            <li>Report</li>
+            <li>Setting</li>
+            <li>Sign In</li>
+            <li>...</li>
+        </nav>
+    </header>
+    <main>
+        <section class="Pomodoro">
+            <nav class="nav_Pomodoro">
+                <ul >
+                    <li class="modes">
+                        Pomodoro
+                    </li>
+                    <li class="modes">Short Break</li>
+                    <li class="modes">Long Break</li>
+                </ul>
+            </nav>
+            <h1 class="timer">25:00</h1>
+            <div class="ssButton">
+                <button class="start-button">Start</button>
+                
+                <button class="skip-button">Skip</button>
+            </div>    
+        </section>
+        <section class="counter">
+            <h2>Counter</h2>
+            <div class="counter-display">
+                <p id="pomodoroCounter">Pomodoros: 0</p>
+                <p id="sCounter">Short Breaks: 0</p>
+                <p id="lCounter">Long Breaks: 0</p>
+            </div>
+            <button class="reset-button">Reset</button>
+        </section>
+        <section class="task">
+            <h3>Tasks</h3>
+            <hr>
+            <div class="task-input-container">
+                <input type="text" id="taskInput" placeholder="Enter a new task..." maxlength="100" autocomplete="off">
+                <button id="addTaskBtn" class="add-task-btn">+</button>
+            </div>
+            <div class="task-list" id="taskList">
+                <!-- Tasks will be dynamically added here -->
+            </div>
+            <div class="task-stats">
+                <span id="totalTasks">Total: 0</span>
+                <span id="completedTasks">Completed: 0</span>
+                <span id="deletedTasks">Delete</span>
+            </div>
+        </section>
+         
+    </main>
+   <footer id="footerContainer">
+        <div class="">
+            <br>
+                <p>"Boost your focus and productivity with the Pomodoro Technique. Work smarter, not longer."</p>
+                <p>© 2025 Pomosheesh | v1.0</p>
+            <br>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
