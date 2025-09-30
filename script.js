@@ -236,7 +236,9 @@ const taskList = document.getElementById("taskList");
  
 const addTask = () =>{
     let taskText = taskInput.value.trim();   
-    if(taskText===""){window.alert("Input cannot be empty!")};
+    if(taskText===""){window.alert("Input cannot be empty!")
+        return;
+    };
 
     let newListItem = document.createElement('li');
     newListItem.classList.add("task-item");
@@ -250,6 +252,13 @@ const addTask = () =>{
     let taskSpan = document.createElement("span");
     taskSpan.textContent = taskText;
     taskSpan.classList.add("task-text");
+     taskSpan.contentEditable = "true";
+     taskSpan.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+            e.preventDefault();            
+            taskSpan.blur();
+        }               
+    });
 
     // delete button
     let deleteButton = document.createElement("button");
@@ -264,8 +273,10 @@ const addTask = () =>{
     // then add li into taskList
     taskList.appendChild(newListItem);
 
+  
+
     taskInput.value = "";
-     taskCounter();
+    taskCounter();
 
     deleteButton.addEventListener("click", ()=>{
         newListItem.remove();
@@ -284,8 +295,11 @@ const addTask = () =>{
         
     )
             checkbox.addEventListener("change", () => {
+                if(checkbox.checked){
                 completedTotal++;
-            completedTaskCounter();
+                
+                }else if(!checkbox.checked) {completedTotal--;}
+                completedTaskCounter();
             });
             
     }
@@ -315,18 +329,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-/*
-Implementation Order (Learning Path):
-Start with variables - Declare all your state variables
-Create formatTime() - Learn to format numbers as time
-Create updateDisplay() - Learn to update DOM elements
-Create getCurrentModeTime() - Learn switch statements
-Create startTimer() - Learn setInterval and countdown logic
-Create pauseTimer() - Learn clearInterval
-Create toggleTimer() - Learn conditional logic
-Create resetTimer() - Learn to reset state
-Create switchMode() - Learn DOM manipulation and styling
-Create attachEventListeners() - Learn event handling
-Create initializeTimer() - Learn initialization patterns
-Add DOMContentLoaded listener - Learn when to run code
-*/
+
