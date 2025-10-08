@@ -20,18 +20,19 @@ background: radial-gradient(circle, rgba(1, 23, 130, 1) 0%, rgba(56, 62, 138, 1)
     margin: 0;
     padding: 0;
     cursor: pointer;
+    font-size: small;
 }
 .nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
+    gap: 40px;
     margin-top: 25px;
     color: #dddddd;
     font-size: 20px;
     border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 700px; 
+    width: 500px; /* ✅ Fixed width */
     
 }
 .nav_Pomodoro ul {
@@ -58,7 +59,7 @@ background: radial-gradient(circle, rgba(1, 23, 130, 1) 0%, rgba(56, 62, 138, 1)
    
 }
 .Pomodoro .nav_Pomodoro li{
-    display: inline-block;
+    display: inline;
     flex-direction: row;
     padding: 5px 10px;
     
@@ -335,4 +336,12 @@ footer{
     align-items: center;
     justify-content: center;
     color: #dddddd;
+}
+.task-text {
+  margin-right: 50px;      
+}
+.task-text[contenteditable="true"]:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+  
 }
